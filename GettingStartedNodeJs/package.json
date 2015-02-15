@@ -1,0 +1,15 @@
+{
+  "name": "GettingStartedNodeJs",
+  "version": "0.0.0",
+  "description": "GettingStartedNodeJs",
+  "main": "app.js",
+  "author": {
+    "name": "isaac",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
