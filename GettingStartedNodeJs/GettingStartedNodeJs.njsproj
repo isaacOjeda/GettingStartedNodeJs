@@ -34,10 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="database.ts" />
     <TypeScriptCompile Include="models\customerModel.ts" />
     <TypeScriptCompile Include="routes\customers.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mongodb\mongodb.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\stylus\stylus.d.ts" />
     <TypeScriptCompile Include="services\customerService.ts" />
@@ -75,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
+    <Folder Include="Scripts\typings\mongodb\" />
     <Folder Include="services\" />
     <Folder Include="public\" />
     <Folder Include="public\fonts\" />

@@ -3,24 +3,36 @@
  */
 
 import customer = require('../models/customerModel');
+import database = require('../database');
 
 export class CustomerService {
     /*
-     * Array dummy de objetos CustomerModel
+     * Acceso a datos
      */
-    dummyRepository: customer.CustomerModel[];
-    /*
-     * Inicializa el array sin datos
-     */
+    data: database.Database;
+
     constructor() {
-        this.dummyRepository = [];
+        this.data = new database.Database();
     }
+
     /*
      * Agrega un nuevo cliente
      * @param newCustomer Nuevo cliente a agregar
      */
     add(newCustomer: customer.CustomerModel): void {
-        this.dummyRepository.push(newCustomer);
+        //TODO Insert in database
+    }
+    /*
+     * Consulta todos los clientes
+     */
+    getCustomers(callback: (customers: customer.CustomerModel[]) => void): void{     
+
+        var customersCollection = this.data.db.collection('customers');
+        var customersResult = customersCollection.find();
+                   
+        customersResult.toArray(function (err, customersArray) {
+            callback(customersArray);
+        });        
     }
 
 }
